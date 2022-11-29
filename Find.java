@@ -19,14 +19,17 @@ public class Find {
       File myObj = new File(fileName);
       Scanner myReader = new Scanner(myObj);
       System.out.println("These are the following lines containing your word:\n");
+      boolean foundWord = false;
       int i = 0;
       while (myReader.hasNextLine()) {
         String data = myReader.nextLine();
         if(data.toUpperCase().contains(searchWord.toUpperCase())) {
+            foundWord = true;
             System.out.println(i + ": " + data + "\n");
         }
         i++;
       }
+      if(!foundWord){System.out.println("The input matched nothing in the file, try again!");}
       myReader.close();
     } catch (FileNotFoundException e) {
       System.out.println("An error occurred.");

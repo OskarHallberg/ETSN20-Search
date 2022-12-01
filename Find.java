@@ -5,6 +5,10 @@ import java.util.Scanner; // Import the Scanner class to read text files
 public class Find {
   public static void main(String[] args) {
 
+    for(int i = 0; i < 10000000;i++){
+      System.out.println("hejhej");
+    }
+    
     System.out.println("Please enter your word and file:\n");
     Scanner sc = new Scanner(System.in);
     String arguments = sc.nextLine();
